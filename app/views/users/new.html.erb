@@ -1,0 +1,21 @@
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name , data: {intro: "Your name goes here", position: 'left'} %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, data: {intro: "Your email is here", position: 'left'} %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password , data: {intro: "Enter your password here", position: 'left'}%>
+
+    <%= f.label :password_confirmation, "Confirm Password" %>
+    <%= f.password_field :password_confirmation, data: {intro: "And conirm it here", position: 'left'} %>
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary", data: {intro: "Submit here", position: 'bottom'} %>
+    <% end %>
+  </div>
+</div>
